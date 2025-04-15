@@ -8,7 +8,7 @@ position: Postdoctoral Scientist
 priority: 3
 #subsequent:  update once you become an alumnus
 email: <a href="mailto:Maryam.RanjpourAghmiouni@cshs.org">Maryam.RanjpourAghmiouni@cshs.org</a><br>
-scholar: c8Cei0AAAAJ
+scholar: -c8Cei0AAAAJ
 website:
 Cedars_Sinai:  #UCSF Profile ID - Employees only
 twitter: #Pooja_Seh
