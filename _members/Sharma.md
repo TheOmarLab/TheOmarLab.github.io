@@ -5,7 +5,7 @@ enddate: []
 image: /static/img/members/sharma.jpg 
 altimage: #/static/img/members/asthana_pb.jpg
 position: Research Associate Data Scientist
-priority: 3
+priority: 4
 #subsequent:  update once you become an alumnus
 email: <a href="mailto:Rishabh.Sharma@cshs.org">Rishabh.Sharma@cshs.org</a><br>
 scholar:  #Google Scholar User ID
