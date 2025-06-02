@@ -10,9 +10,9 @@
   link: "/publications"
   group: publications
 
-- name: Funding
-  link: "/funding"
-  group: funding
+# - name: Funding
+#   link: "/funding"
+#   group: funding
 
 - name: Members
   link: "/members"
