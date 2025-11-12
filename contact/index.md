@@ -23,6 +23,7 @@ group: contact
   <h4>Mohamed Omar, MD</h4>
   Assistant Professor<br>
   [Department of Computational Biomedicine](https://www.cedars-sinai.edu/health-sciences-university/research/departments-institutes/computational-biomedicine.html)<br>
+  [Department of Urology](https://www.cedars-sinai.edu/health-sciences-university/research/departments-institutes/urology.html)<br>
   [Cedars-Sinai Medical Center](https://www.cedars-sinai.org/home.html)<br>
   700 N. San Vicente Blvd., Suite G-540F<br>
   West Hollywood, CA 90069<br>
