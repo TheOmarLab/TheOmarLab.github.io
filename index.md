@@ -7,7 +7,7 @@ group: home
 # Welcome to the Omar Lab!
 {: .display-4}
 <br>
-We are part of the [Department of Computational Biomedicine](https://www.cedars-sinai.edu/health-sciences-university/research/departments-institutes/computational-biomedicine.html) and the [Samuel Oschin Comprehensive Cancer Institute](https://www.cedars-sinai.edu/health-sciences-university/research/departments-institutes/cancer.html) at [Cedars-Sinai Medical Center](https://www.cedars-sinai.org/home.html).
+We are part of the [Department of Computational Biomedicine](https://www.cedars-sinai.edu/health-sciences-university/research/departments-institutes/computational-biomedicine.html), the [Department of Urology](https://www.cedars-sinai.edu/health-sciences-university/research/departments-institutes/urology.html), and the [Samuel Oschin Comprehensive Cancer Institute](https://www.cedars-sinai.edu/health-sciences-university/research/departments-institutes/cancer.html) at [Cedars-Sinai Medical Center](https://www.cedars-sinai.org/home.html).
 {: .welcomefont}
 
 ![Cedars-Sinai](static/img/logo/Cedars1.png){:style="max-width: 100%; height: auto;"}
