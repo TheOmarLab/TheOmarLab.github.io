@@ -1,5 +1,4 @@
-<!--
-## Omar Lab Alumni
+## Omar Lab Interns
 {% assign sorted = site.members | sort: "enddate" | reverse %}
 {% for member in sorted %}
 
@@ -180,5 +179,3 @@ Subsequently: {{student.subsequent}}<br>
 {% endif %}
 </p>
 </div> {% endfor %}
-
--->
