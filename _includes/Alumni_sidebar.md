@@ -1,4 +1,4 @@
-## Omar Lab Interns
+## Omar Lab Alumni
 {% assign sorted = site.members | sort: "enddate" | reverse %}
 {% for member in sorted %}
 
@@ -107,38 +107,6 @@ Subsequently: {{member.subsequent}} <br>
 
 {% if undergraduate.subsequent %}
 Subsequently: {{undergraduate.subsequent}}<br>
-{% endif %}
-</p>
-</div> {% endfor %}
-
-
-<br>
-## High School Interns
-{% for student in sorted %}
-
-{% assign position = student.position | downcase %}
-{% unless position contains "sep" or position contains "high school"%}
-{% continue %}
-{% endunless %}
-
-<hr>
-<div id = "{{student.name}}" style="padding-top: 60px; margin-top: -60px;">
-<p><strong>{{student.name}}</strong><br>
-
-{% assign start = student.startdate | first | date:"%Y" %}
-{% assign end = student.enddate | last | date:"%Y" %}
-
-{% if start == end %}
-{{ start }}<br>
-{% else %}
-{{ start }} - {{ end }}<br>
-{% endif %}
-
-{% if student.pronouns %}
-<em>{{student.pronouns}}</em> <br>
-{% endif %}
-{% if student.subsequent %}
-Subsequently: {{student.subsequent}}<br>
 {% endif %}
 </p>
 </div> {% endfor %}
