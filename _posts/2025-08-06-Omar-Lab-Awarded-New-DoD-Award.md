@@ -5,7 +5,7 @@ layout: post
 group: news
 ---
 
-We are excited to share that the Omar Lab has received a **U.S. Department of Defense Prostate Cancer Research Program (PCRP) Idea Development Award (DoD #HT9425-24-1-0381)** to support our ongoing efforts to understand and predict **bone metastasis in prostate cancer**.
+We are excited to share that the Omar Lab has received a **U.S. Department of Defense Prostate Cancer Research Program (PCRP) Idea Development Award** to support our ongoing efforts to understand and predict **bone metastasis in prostate cancer**.
 
 This three-year project, titled *“Decoding Bone Metastasis in Prostate Cancer: A Multimodal Approach Integrating Genomics and Imaging Data,”* aims to uncover the molecular and spatial mechanisms that allow prostate cancer cells to colonize bone and drive disease progression. Our team will develop integrative computational frameworks that combine genomic, transcriptomic, and imaging data to identify early predictors of metastasis directly from diagnostic tumor samples.
 
