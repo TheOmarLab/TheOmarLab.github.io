@@ -1,5 +1,5 @@
 ---
-title: Omar Lab Receives DoD Award to Decode Bone Metastasis in Prostate Cancer
+title: New DoD Award to Decode Bone Metastasis in Prostate Cancer
 author:
 layout: post
 group: news
