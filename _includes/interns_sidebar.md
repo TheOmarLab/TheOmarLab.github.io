@@ -113,7 +113,7 @@ Subsequently: {{undergraduate.subsequent}}<br>
 
 
 <br>
-## High Schoo Interns
+## High School Interns
 {% for student in sorted %}
 
 {% assign position = student.position | downcase %}
