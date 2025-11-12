@@ -1,5 +1,5 @@
 ---
-title: The Omar lab is now open at Cedars-Sinai!
+title: The Omar Lab is Now Open at Cedars-Sinai!
 author:
 layout: post
 group: news
