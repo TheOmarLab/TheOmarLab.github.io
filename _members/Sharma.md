@@ -1,7 +1,7 @@
 ---
 name: Rishabh Sharma, MS.
 startdate: [2025-02-17]
-enddate: []
+enddate: [2026-01-14]
 image: /static/img/members/sharma.jpg 
 altimage: #/static/img/members/asthana_pb.jpg
 position: Research Associate Data Scientist
