@@ -1,36 +1,136 @@
+/* Omar Lab Custom Styles */
 
-@media (min-width: 992px) {
-   .navbar-collapse {
-       display: none !important;
-   }
+/* ==========================================================================
+   CSS Variables - Color Scheme
+   ========================================================================== */
+:root {
+  --primary-navy: #052049;
+  --primary-dark: #031630;
+  --accent-teal: #0891b2;
+  --accent-gold: #d4a84b;
+  --accent-light: #e8f4f8;
+  --text-dark: #1a1a1a;
+  --text-muted: #6b7280;
+  --white: #ffffff;
+  --gray-light: #f3f4f6;
+  --gray-border: #e5e7eb;
 }
 
-.video-container {
-    position: relative;
-    padding-bottom: 56.25%;
-    padding-top: 30px; height: 0; overflow: hidden;
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+body {
+  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: var(--text-dark);
+  line-height: 1.6;
 }
 
-.video-container iframe,
-.video-container object,
-.video-container embed {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  color: var(--primary-navy);
 }
 
-.chart {
-  position: relative;
-  width: 100%;
-  height: 500px
+h1 { font-weight: 700; }
+
+.display-4 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  color: var(--primary-navy);
 }
 
-.smalltxt {
-  font-size: 0.9rem;
+/* ==========================================================================
+   Navbar
+   ========================================================================== */
+.navbar {
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+.navbar-brand {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
+.nav-link {
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: var(--accent-gold) !important;
+}
+
+/* ==========================================================================
+   Links & Buttons
+   ========================================================================== */
+a {
+  color: var(--accent-teal);
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--primary-navy);
+  text-decoration: none;
+}
+
+/* Accent styling for important links */
+.btn-primary {
+  background-color: var(--accent-teal);
+  border-color: var(--accent-teal);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-navy);
+  border-color: var(--primary-navy);
+}
+
+/* ==========================================================================
+   Welcome / Home Page
+   ========================================================================== */
+.welcomefont {
+  font-size: 1.4em;
+  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  line-height: 1.7;
+  color: var(--text-dark);
+}
+
+/* ==========================================================================
+   Cards & Sections
+   ========================================================================== */
+.card {
+  border: 1px solid var(--gray-border);
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.2s ease;
+}
+
+.card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+/* Section headers with accent underline */
+h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: var(--accent-teal);
+  margin-top: 10px;
+}
+
+/* Sidebar headers - no underline */
+.col-md-3 h2::after,
+.col-md-4 h2::after,
+aside h2::after {
+  display: none;
+}
+
+/* ==========================================================================
+   Member Icons & Images
+   ========================================================================== */
 .mem-icon {
   height: 1em;
 }
@@ -39,85 +139,80 @@
   height: 1.8em;
 }
 
-.navbar {
-  margin-bottom: 20px;
+/* Member photos styling */
+img[src*="members"] {
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.welcomefont {
-  font-size: 1.5em;
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+/* ==========================================================================
+   Video Container
+   ========================================================================== */
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
 }
 
-
-/*
-body {
-  padding-top: 60px;
-  padding-bottom: 40px;
+.video-container iframe,
+.video-container object,
+.video-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
-/*
-.navbar-default {
-  background-color: #052049;
-  border-color: #668a75;
+/* ==========================================================================
+   Charts & Visualizations
+   ========================================================================== */
+.chart {
+  position: relative;
+  width: 100%;
+  height: 500px;
 }
 
-.navbar-default .navbar-brand {
-  font-family: "Lucida Bright", Georgia, serif;
-
-  color: #f6f6f6;
+/* ==========================================================================
+   Utility Classes
+   ========================================================================== */
+.smalltxt {
+  font-size: 0.9rem;
 }
 
-.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
-  color: #fdfdfd;
-}
-.navbar-default .navbar-text {
-  color: #f6f6f6;
-}
-.navbar-default .navbar-nav > li > a {
-  color: #f6f6f6;
-}
-.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
-  color: #fdfdfd;
-}
-.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
-  color: #fdfdfd;
-  background-color: #668a75;
-}
-.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
-  color: #fdfdfd;
-  background-color: #668a75;
-}
-.navbar-default .navbar-toggle {
-  border-color: #668a75;
-}
-.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
-  background-color: #668a75;
-}
-.navbar-default .navbar-toggle .icon-bar {
-  background-color: #f6f6f6;
-}
-.navbar-default .navbar-collapse,
-.navbar-default .navbar-form {
-  border-color: #f6f6f6;
-}
-.navbar-default .navbar-link {
-  color: #f6f6f6;
-}
-.navbar-default .navbar-link:hover {
-  color: #fdfdfd;
+.text-accent {
+  color: var(--accent-teal);
 }
 
+.text-gold {
+  color: var(--accent-gold);
+}
 
-@media (max-width: 767px) {
-  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
-    color: #f6f6f6;
+.bg-accent-light {
+  background-color: var(--accent-light);
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+footer {
+  border-top: 1px solid var(--gray-border);
+  padding-top: 20px;
+  margin-top: 40px;
+  color: var(--text-muted);
+}
+
+/* ==========================================================================
+   Responsive Adjustments
+   ========================================================================== */
+@media (max-width: 768px) {
+  .welcomefont {
+    font-size: 1.2em;
   }
-  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
-    color: #fdfdfd;
-  }
-  .navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
-    color: #fdfdfd;
-    background-color: #668a75;
+
+  h2::after {
+    width: 40px;
   }
 }
-*/
