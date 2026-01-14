@@ -1,0 +1,19 @@
+# robots.txt for Omar Lab website
+# https://www.omar-lab.com
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://www.omar-lab.com/sitemap.xml
+
+# Crawl-delay (optional, be polite to search engines)
+Crawl-delay: 1
+
+# Disallow development/build artifacts
+Disallow: /.git/
+Disallow: /.jekyll-cache/
+Disallow: /Gemfile
+Disallow: /Gemfile.lock
+Disallow: /*.Rproj
+Disallow: /.Rproj.user/
