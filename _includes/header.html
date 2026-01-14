@@ -131,30 +131,68 @@
         {
           "@type": "Person",
           "@id": "{{ site.url }}/#person",
-          "name": "Mohamed Omar, M.D.",
+          "name": "Mohamed Omar",
+          "givenName": "Mohamed",
+          "familyName": "Omar",
+          "honorificPrefix": "Dr.",
+          "honorificSuffix": "M.D.",
           "url": "{{ site.url }}",
-          "image": "{{ site.url }}/static/img/members/omar.jpg",
-          "jobTitle": "Principal Investigator",
-          "description": "Assistant Professor of Computational Biomedicine and Urology at Cedars-Sinai Medical Center",
-          "worksFor": {
-            "@id": "{{ site.url }}/#organization"
+          "image": {
+            "@type": "ImageObject",
+            "url": "{{ site.url }}/static/img/members/omar.jpg",
+            "width": 800,
+            "height": 800
           },
+          "jobTitle": "Assistant Professor of Computational Biomedicine and Urology",
+          "description": "Mohamed Omar, M.D. is an Assistant Professor and Principal Investigator at Cedars-Sinai Medical Center, leading the Omar Lab focused on AI-powered computational pathology and cancer research.",
+          "worksFor": {
+            "@type": "MedicalOrganization",
+            "name": "Cedars-Sinai Medical Center",
+            "url": "https://www.cedars-sinai.org",
+            "department": [
+              {"@type": "Organization", "name": "Department of Computational Biomedicine"},
+              {"@type": "Organization", "name": "Department of Urology"}
+            ]
+          },
+          "affiliation": [
+            {
+              "@type": "MedicalOrganization",
+              "name": "Samuel Oschin Comprehensive Cancer Institute",
+              "url": "https://www.cedars-sinai.edu/health-sciences-university/research/departments-institutes/cancer.html"
+            }
+          ],
+          "knowsAbout": [
+            "Computational Pathology",
+            "Artificial Intelligence",
+            "Cancer Research",
+            "Tumor Microenvironment",
+            "Digital Pathology",
+            "Machine Learning",
+            "Prostate Cancer",
+            "Bladder Cancer"
+          ],
           "sameAs": [
             "https://www.linkedin.com/in/mohamed-omar-md/",
             "https://scholar.google.com/citations?user=iHJ6TzcAAAAJ",
             "https://twitter.com/MohamedOmarMD",
-            "https://orcid.org/0000-0002-8068-1920"
+            "https://orcid.org/0000-0002-8068-1920",
+            "https://researchers.cedars-sinai.edu/Mohamed.Omar",
+            "https://github.com/MohamedOmar2020"
           ],
           "alumniOf": [
             {
               "@type": "CollegeOrUniversity",
-              "name": "Johns Hopkins University"
+              "name": "Johns Hopkins University",
+              "url": "https://www.jhu.edu"
             },
             {
               "@type": "CollegeOrUniversity",
-              "name": "Weill Cornell Medicine"
+              "name": "Weill Cornell Medicine",
+              "url": "https://weill.cornell.edu"
             }
-          ]
+          ],
+          "award": "DoD Award HT9425-24-1-0381",
+          "nationality": "American"
         }
       ]
     }
