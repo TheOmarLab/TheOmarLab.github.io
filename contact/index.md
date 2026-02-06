@@ -27,7 +27,7 @@ group: contact
   [Cedars-Sinai Medical Center](https://www.cedars-sinai.org/home.html)<br>
   700 N. San Vicente Blvd., Suite G-540F<br>
   West Hollywood, CA 90069<br>
-  Email: <a href="mailto:Mohamed.Omar@cshs.org">Mohamed.Omar@cshs.org</a><br>
+  Email: <a href="mailto:Mohamed.Omar@csmc.edu">Mohamed.Omar@csmc.edu</a><br>
   Phone: 424‐315‐1312
 
 </div>

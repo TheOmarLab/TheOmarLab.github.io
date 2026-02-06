@@ -1,6 +1,6 @@
 ---
 title: New DoD Award to Decode Bone Metastasis in Prostate Cancer
-author: Mohamed Omar
+author:
 layout: post
 group: news
 ---

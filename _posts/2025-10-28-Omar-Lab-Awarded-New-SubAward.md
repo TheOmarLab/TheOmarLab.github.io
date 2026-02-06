@@ -1,6 +1,6 @@
 ---
 title: New Subaward to Advance Multi-Omics Integration
-author: Mohamed Omar
+author:
 layout: post
 group: news
 ---
