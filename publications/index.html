@@ -19,10 +19,13 @@ group: publications
 			{{publication.pub_date | split: "-" | first }}
 		{% else %}
 			{% if publication.biorxiv %}
-			<i>Biorxiv,</i>
+			<i>bioRxiv,</i>
 				{{publication.pub_date | split: "-" | first }}
 			{% elsif publication.biorxiv_version %}
-			<i>Biorxiv,</i>
+			<i>bioRxiv,</i>
+				{{publication.pub_date | split: "-" | first }}
+			{% elsif publication.medrxiv %}
+			<i>medRxiv,</i>
 				{{publication.pub_date | split: "-" | first }}
 			{% else %}
 			<i>Preprint,</i>
@@ -60,7 +63,7 @@ group: publications
   "author": {{ publication.authors | strip_html | remove: "**" | split: "," | jsonify }},
   "publisher": {
     "@type": "Organization",
-    "name": {% if publication.journal %}{{ publication.journal | strip | jsonify }}{% else %}"bioRxiv"{% endif %}
+    "name": {% if publication.journal %}{{ publication.journal | strip | jsonify }}{% elsif publication.medrxiv %}"medRxiv"{% else %}"bioRxiv"{% endif %}
   },
   "url": "{{ site.url }}/publications/#{{ publication.pmid }}"
 }
@@ -90,7 +93,12 @@ group: publications
 
 		<!--Biorxiv specific version-->
 		{% if publication.biorxiv_version %}
-		<li>Biorxiv Preprint v{{publication.biorxiv_version | split: "." | last | split: "v" | last }}: <a href="http://www.biorxiv.org/content/10.1101/{{publication.biorxiv_version}}" title =  "BioRxiv Preprint: {{publication.biorxiv_version}} (opens in new tab)" target="_blank">{{publication.biorxiv_version | split: "." | last | split: "v" | first }}</a></li>
+		<li>bioRxiv Preprint v{{publication.biorxiv_version | split: "." | last | split: "v" | last }}: <a href="http://www.biorxiv.org/content/10.1101/{{publication.biorxiv_version}}" title =  "bioRxiv Preprint: {{publication.biorxiv_version}} (opens in new tab)" target="_blank">{{publication.biorxiv_version | split: "." | last | split: "v" | first }}</a></li>
+		{% endif %}
+
+		<!--medRxiv - optional -->
+		{% if publication.medrxiv %}
+		<li>medRxiv Preprint: <a href="https://www.medrxiv.org/content/{{publication.medrxiv}}" title="medRxiv Preprint (opens in new tab)" target="_blank">{{ publication.medrxiv | split: "/" | last | split: "v" | first }}</a></li>
 		{% endif %}
 
 		<!--Arxiv - optional -->
