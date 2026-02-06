@@ -2,6 +2,7 @@
 title: Join the Omar Lab
 layout: default
 group: join
+description: "Open positions for graduate students, postdoctoral fellows, and visitors at the Omar Lab, Department of Computational Biomedicine, Cedars-Sinai."
 ---
 
 # Join the Omar Lab

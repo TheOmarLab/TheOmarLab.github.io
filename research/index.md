@@ -2,6 +2,7 @@
 title: Research in the Omar Lab
 layout: default
 group: research
+description: "Our research focuses on AI-powered multimodal risk stratification, digital pathology, and tumor microenvironment analysis for cancer patients at Cedars-Sinai."
 ---
 
 <div class="row">
@@ -26,8 +27,7 @@ Our work in this domain leverages deep learning algorithms to automate WSIs prep
 
 </div>
 <div class="col-md-5 order-md-2 align-self-center">
-<img class="img-fluid" src="/static/img/pub/erg.jpeg" alt="ERGmodel">
-<!-- <a href="http://www.ucsf.edu"><img class="inline-block navb-icon" src="/static/img/ucsf_logo_white.svg" alt="University of California, San Francisco (UCSF) logo"></a> -->
+<img class="img-fluid" src="/static/img/pub/erg.jpeg" alt="ERGmodel" loading="lazy">
 
 </div>
 </div>
@@ -42,8 +42,7 @@ We employ high-resolution spatial omics to generate single cell-resolution data 
 
 </div>
 <div class="col-md-5 order-md-1 align-self-center">
-<img class="img-fluid" src="/static/img/pub/digitalpath.gif" alt="digitalPath">
-<!-- <a href="http://www.ucsf.edu"><img class="inline-block navb-icon" src="/static/img/ucsf_logo_white.svg" alt="University of California, San Francisco (UCSF) logo"></a> -->
+<img class="img-fluid" src="/static/img/pub/digitalpath.gif" alt="digitalPath" loading="lazy">
 
 </div>
 </div>
@@ -59,7 +58,7 @@ Omics offer a deep dive into the molecular underpinnings of tumor progression, w
 
 </div>
 <div class="col-md-5 order-md-2 text-end d-flex justify-content-center">
-<img class="img-fluid" style="max-width: 550px; height: auto; object-fit: contain;" src="/static/img/pub/MultimodalRiskAssessment.png" alt="multimodal">
+<img class="img-fluid" style="max-width: 550px; height: auto; object-fit: contain;" src="/static/img/pub/MultimodalRiskAssessment.png" alt="multimodal" loading="lazy">
 </div>
 </div>
 

@@ -38,7 +38,7 @@ Subsequently: {{member.subsequent}} <br>
 {% endif %}
 
 {% if member.email %}
-{% unless member.email contains "ucsf.edu" or member.email contains "fraserlab" %}
+{% unless member.email contains "cshs.org" or member.email contains "csmc.edu" %}
 <em>{{member.email}}</em> <br>
 {% endunless %}
 {% endif %}

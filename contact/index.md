@@ -2,6 +2,7 @@
 title: Contact the Omar Lab
 layout: default
 group: contact
+description: "Contact information for Mohamed Omar, MD and the Omar Lab at the Department of Computational Biomedicine, Cedars-Sinai Medical Center."
 ---
 
 # Contact the Omar Lab
