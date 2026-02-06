@@ -1,9 +1,12 @@
 _site/
 .bundle/
 .DS_Store
+**/.DS_Store
 Gemfile.lock
 vendor/
 .ipynb_checkpoints/
 .Rproj.user
 TheOmarLab.github.io.Rproj
-_publications/.Rhistory
+.Rhistory
+**/.Rhistory
+*.Rhistory

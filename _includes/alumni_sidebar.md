@@ -38,7 +38,7 @@ Subsequently: {{member.subsequent}} <br>
 {% endif %}
 
 {% if member.email %}
-{% unless member.email contains "ucsf.edu" or "fraserlab" %}
+{% unless member.email contains "ucsf.edu" or member.email contains "fraserlab" %}
 <em>{{member.email}}</em> <br>
 {% endunless %}
 {% endif %}
@@ -68,7 +68,7 @@ Subsequently: {{member.subsequent}} <br>
 {% endif %}
 
 {% if member.github %}
-<a href="http://github.com"><img class="inline-bloc mem-icon" src="/static/img/logo/github_logo.svg"></a>
+<a href="http://github.com"><img class="inline-block mem-icon" src="/static/img/logo/github_logo.svg"></a>
 <a href= "http://github.com/{{member.github}}"> {{member.github}} </a> <br>
 {% endif %}
 </p>

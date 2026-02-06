@@ -1,6 +1,6 @@
 ---
 title: The Omar Lab is Now Open at Cedars-Sinai!
-author:
+author: Mohamed Omar
 layout: post
 group: news
 ---
