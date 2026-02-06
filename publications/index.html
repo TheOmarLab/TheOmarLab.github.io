@@ -32,6 +32,40 @@ group: publications
 	</div>
 </div>
 
+<!-- Structured data for this publication -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "headline": {{ publication.title | strip_html | jsonify }},
+  "datePublished": "{{ publication.pub_date }}",
+  {% if publication.journal %}"isPartOf": {
+    "@type": "Periodical",
+    "name": {{ publication.journal | strip | jsonify }}
+  },{% endif %}
+  {% if publication.pmid %}"identifier": [
+    {
+      "@type": "PropertyValue",
+      "propertyID": "PMID",
+      "value": "{{ publication.pmid }}"
+    }{% if publication.pdf %},
+    {
+      "@type": "PropertyValue",
+      "propertyID": "URL",
+      "value": "{{ publication.pdf }}"
+    }{% endif %}
+  ],
+  "sameAs": "https://pubmed.ncbi.nlm.nih.gov/{{ publication.pmid }}/",{% endif %}
+  {% if publication.image %}"image": "{{ site.url }}{{ publication.image }}",{% endif %}
+  "author": {{ publication.authors | strip_html | remove: "**" | split: "," | jsonify }},
+  "publisher": {
+    "@type": "Organization",
+    "name": {% if publication.journal %}{{ publication.journal | strip | jsonify }}{% else %}"bioRxiv"{% endif %}
+  },
+  "url": "{{ site.url }}/publications/#{{ publication.pmid }}"
+}
+</script>
+
 <div class="row" style="padding-top: 20px; margin-top: -20px">
 	<div class="col-sm-6">
 		<img class = "img-fluid" src = "{{publication.image}}" alt =  "Key Figure" style="max-height: 200px;">

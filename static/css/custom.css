@@ -8,12 +8,33 @@
   --primary-dark: #031630;
   --accent-teal: #0891b2;
   --accent-gold: #d4a84b;
+  --accent-gold-accessible: #b8860b;
   --accent-light: #e8f4f8;
   --text-dark: #1a1a1a;
   --text-muted: #6b7280;
   --white: #ffffff;
   --gray-light: #f3f4f6;
   --gray-border: #e5e7eb;
+}
+
+/* ==========================================================================
+   Skip Link (Accessibility)
+   ========================================================================== */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  background: var(--primary-navy);
+  color: var(--white);
+  padding: 0.5rem 1rem;
+  z-index: 9999;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 0;
+  color: var(--white);
 }
 
 /* ==========================================================================
@@ -63,6 +84,25 @@ h1 { font-weight: 700; }
 }
 
 /* ==========================================================================
+   Focus Indicators (Accessibility)
+   ========================================================================== */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+[tabindex]:focus-visible {
+  outline: 3px solid var(--accent-teal);
+  outline-offset: 2px;
+}
+
+.navbar-toggler:focus-visible {
+  outline: 3px solid var(--white);
+  outline-offset: 2px;
+  box-shadow: none;
+}
+
+/* ==========================================================================
    Links & Buttons
    ========================================================================== */
 a {
@@ -84,6 +124,16 @@ a:hover {
 .btn-primary:hover {
   background-color: var(--primary-navy);
   border-color: var(--primary-navy);
+}
+
+/* ==========================================================================
+   Hero Section (replaces Bootstrap 4 jumbotron)
+   ========================================================================== */
+.hero-section {
+  padding: 2rem 1rem;
+  margin-bottom: 2rem;
+  background-color: var(--gray-light);
+  border-radius: 0.5rem;
 }
 
 /* ==========================================================================
@@ -186,8 +236,9 @@ img[src*="members"] {
   color: var(--accent-teal);
 }
 
+/* Use accessible gold for text (WCAG AA compliant on white) */
 .text-gold {
-  color: var(--accent-gold);
+  color: var(--accent-gold-accessible);
 }
 
 .bg-accent-light {
@@ -205,14 +256,96 @@ footer {
 }
 
 /* ==========================================================================
-   Responsive Adjustments
+   Reduced Motion (Accessibility)
    ========================================================================== */
-@media (max-width: 768px) {
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ==========================================================================
+   Responsive Breakpoints (Mobile-First)
+   ========================================================================== */
+
+/* --- Small phones (< 480px) --- */
+@media (max-width: 479px) {
+  .welcomefont {
+    font-size: 1.1em;
+    line-height: 1.5;
+  }
+
+  h1 { font-size: 1.5rem; }
+  h2 { font-size: 1.25rem; }
+  h3 { font-size: 1.1rem; }
+
+  h2::after {
+    width: 35px;
+  }
+
+  .hero-section {
+    padding: 1rem 0.75rem;
+    margin-bottom: 1rem;
+  }
+
+  .container {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .navbar-brand {
+    font-size: 1.1rem;
+  }
+
+  img.img-fluid[src*="pub"] {
+    max-height: 150px !important;
+  }
+}
+
+/* --- Large phones (480px - 767px) --- */
+@media (min-width: 480px) and (max-width: 767px) {
   .welcomefont {
     font-size: 1.2em;
   }
 
+  h1 { font-size: 1.65rem; }
+
   h2::after {
     width: 40px;
+  }
+
+  .hero-section {
+    padding: 1.5rem 1rem;
+  }
+}
+
+/* --- Tablets (768px - 991px) --- */
+@media (min-width: 768px) and (max-width: 991px) {
+  .welcomefont {
+    font-size: 1.3em;
+  }
+
+  h2::after {
+    width: 50px;
+  }
+
+  .hero-section {
+    padding: 1.75rem 1rem;
+  }
+}
+
+/* --- Desktops (992px+) --- */
+@media (min-width: 992px) {
+  .welcomefont {
+    font-size: 1.4em;
+  }
+
+  .hero-section {
+    padding: 2rem 1rem;
   }
 }
