@@ -7,9 +7,6 @@ Allow: /
 # Sitemap location
 Sitemap: https://www.omar-lab.com/sitemap.xml
 
-# Crawl-delay (optional, be polite to search engines)
-Crawl-delay: 1
-
 # Disallow development/build artifacts
 Disallow: /.git/
 Disallow: /.jekyll-cache/
@@ -17,3 +14,7 @@ Disallow: /Gemfile
 Disallow: /Gemfile.lock
 Disallow: /*.Rproj
 Disallow: /.Rproj.user/
+
+# Block legacy content from previous site template
+Disallow: /static/courses/
+Disallow: /static/img/news/Cedars2_files/

@@ -30,23 +30,23 @@ exclude:
 
 collections:
         affiliates:
-                output: true
+                output: false
         members:
                 output: true
         publications:
-                output: true
+                output: false
         reviews:
-                output: true
+                output: false
         alumni:
                 output: true
         sep:
-                output: true
+                output: false
         visitors:
-                output: true
+                output: false
         undergrads:
-                output: true
+                output: false
         tags:
-                output: true
+                output: false
         funding:
-                output: true
+                output: false
 

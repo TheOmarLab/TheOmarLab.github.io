@@ -3,11 +3,11 @@
   group: home
 
 - name: Research
-  link: "/research"
+  link: "/research/"
   group: research
 
 - name: Publications
-  link: "/publications"
+  link: "/publications/"
   group: publications
 
 # - name: Funding
@@ -15,7 +15,7 @@
 #   group: funding
 
 - name: Members
-  link: "/members"
+  link: "/members/"
   group: members
 
 #- name: teaching
@@ -27,13 +27,13 @@
 #  group: philosophy
 
 - name: News
-  link: "/news"
+  link: "/news/"
   group: news
 
 - name: Join
-  link: "/join"
+  link: "/join/"
   group: join
 
 - name: Contact
-  link: "/contact"
+  link: "/contact/"
   group: contact
