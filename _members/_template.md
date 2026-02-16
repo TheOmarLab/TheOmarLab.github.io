@@ -1,3 +1,7 @@
+---
+published: false
+sitemap: false
+---
 Required fields:
 Name, start date, image, altimage, position, email, ORCID, Google Scholar ID, description
 Optional fields:

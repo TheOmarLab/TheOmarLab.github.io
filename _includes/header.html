@@ -18,7 +18,7 @@
     <meta name="theme-color" content="#052049">
     <meta http-equiv="Permissions-Policy" content="interest-cohort=()"/>
     <meta name="author" content="Omar Lab, Cedars-Sinai Medical Center">
-    <meta name="robots" content="index, follow">
+    <meta name="robots" content="{{ page.robots | default: 'index, follow' }}">
 
     <!-- Canonical URL -->
     <link rel="canonical" href="{{ site.url }}{{ page.url | replace: 'index.html', '' }}">

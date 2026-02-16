@@ -15,6 +15,9 @@ Disallow: /Gemfile.lock
 Disallow: /*.Rproj
 Disallow: /.Rproj.user/
 
+# Block empty news pagination pages
+Disallow: /news/page
+
 # Block legacy content from previous site template
 Disallow: /static/courses/
 Disallow: /static/img/news/Cedars2_files/
