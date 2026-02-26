@@ -29,6 +29,8 @@ exclude:
         - vendor/ruby/
 
 collections:
+        software:
+                output: false
         affiliates:
                 output: false
         members:
