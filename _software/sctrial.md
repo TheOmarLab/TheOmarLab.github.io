@@ -1,9 +1,9 @@
 ---
 name: sctrial
-title: "sctrial: Trial-Aware Statistical Inference for Single-Cell Data"
-description: "Python package for rigorous statistical inference on single-cell RNA-seq data from clinical trials and longitudinal studies."
+title: "sctrial: Participant-Level Differential Analysis for Longitudinal Single-Cell Experiments"
+description: "Python package for participant-level differential analysis of longitudinal single-cell RNA-seq data. Implements difference-in-differences, paired comparisons, and cross-sectional contrasts with pseudobulk aggregation."
 github: "https://github.com/TheOmarLab/sctrial"
-docs: "https://TheOmarLab.github.io/sctrial/"
+docs: "https://www.omar-lab.com/sctrial/"
 pypi: "https://pypi.org/project/sctrial/"
 logo: "/static/img/software/sctrial_logo.svg"
 language: Python

@@ -26,9 +26,9 @@
 #  link: "/philosophy"
 #  group: philosophy
 
-# - name: Software
-#   link: "/software/"
-#   group: software
+- name: Software
+  link: "/software/"
+  group: software
 
 - name: News
   link: "/news/"
