@@ -35,13 +35,13 @@ collections:
         affiliates:
                 output: false
         members:
-                output: true
+                output: false
         publications:
                 output: false
         reviews:
                 output: false
         alumni:
-                output: true
+                output: false
         sep:
                 output: false
         visitors:
