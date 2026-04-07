@@ -8,9 +8,9 @@ description: "Latest news, publications, awards, and presentations from the Omar
 <!-- This loops through the paginated posts -->
 {% for post in paginator.posts %}
 <hr>
-<h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+<h2><a href="{{ post.url }}" style="color: #052049; text-decoration: none;">{{ post.title }}</a></h2>
 <p class="author">
-  <span class="author"><a href="/members#{{post.author}}">{{post.author}}</a></span><br>
+  {% if post.author %}<span class="author"><a href="/members#{{post.author}}">{{post.author}}</a></span><br>{% endif %}
   <span class="date"><em>{{ post.date | date_to_long_string }}</em></span>
   {% if post.tags.size > 0 %}
   <br>tags:
@@ -23,7 +23,8 @@ description: "Latest news, publications, awards, and presentations from the Omar
   {% endif %}
 </p>
 <div class="content">
-  {{ post.content }}
+  <p>{{ post.excerpt | strip_html | truncatewords: 60 }}</p>
+  <a href="{{ post.url }}" class="btn btn-sm" style="background-color: #052049; color: white;">Read more →</a>
 </div>
 {% endfor %}
 <hr>
