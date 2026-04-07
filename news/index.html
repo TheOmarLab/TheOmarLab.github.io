@@ -14,9 +14,9 @@ description: "Latest news, publications, awards, and presentations from the Omar
 <div class="news-item" style="margin-bottom: 2rem;">
   <hr>
   <h3><a href="{{ post.url }}" style="color: #052049; text-decoration: none;">{{ post.title }}</a></h3>
-  <p style="color: #6c757d; margin-bottom: 0.75rem;">
-    {% if post.author %}<a href="/members#{{post.author}}">{{post.author}}</a> · {% endif %}
-    <em>{{ post.date | date_to_long_string }}</em>
+  <p style="color: #0891b2; font-size: 0.95rem; font-weight: 500; margin-bottom: 0.75rem;">
+    {{ post.date | date_to_long_string }}
+    {% if post.author %} · <a href="/members#{{post.author}}" style="color: #6c757d;">{{post.author}}</a>{% endif %}
     {% if post.tags.size > 0 %}
     · tags:
     {% for tag in post.tags %}
