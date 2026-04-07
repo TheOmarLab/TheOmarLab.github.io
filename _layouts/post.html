@@ -5,8 +5,8 @@
         <div class="col-12">
             <h1 style="font-size: 1.75rem; font-weight: 600; margin-bottom: 0.5rem;">{{ page.title }}</h1>
             {% if page.date %}
-            <p style="color: #0891b2; font-size: 1rem; font-weight: 500; margin-bottom: 1.5rem;">
-              {{ page.date | date_to_long_string }}
+            <p style="color: #6c757d; margin-bottom: 1.5rem;">
+              <em>{{ page.date | date: "%B %-d, %Y" }}</em>
             </p>
             {% endif %}
             {{ content }}
