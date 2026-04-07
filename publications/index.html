@@ -89,7 +89,7 @@ description: "Peer-reviewed publications and preprints from the Omar Lab on comp
 
 		<!--Biorxiv - optional -->
 		{% if publication.biorxiv %}
-		<li>Biorxiv Preprint: <a href="http://dx.doi.org/10.1101/{{publication.biorxiv}}" title =  "BioRxiv Preprint: {{publication.biorxiv}} (opens in new tab)" target="_blank"> {{publication.biorxiv | split: "." | last }}</a></li>
+		<li>bioRxiv Preprint: <a href="https://www.biorxiv.org/content/{{publication.biorxiv}}" title =  "bioRxiv Preprint: {{publication.biorxiv}} (opens in new tab)" target="_blank"> {{publication.biorxiv | split: "/" | last | split: "v" | first }}</a></li>
 		{% endif %}
 
 		<!--Biorxiv specific version-->
