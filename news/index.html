@@ -1,33 +1,38 @@
 ---
 title: News from the Omar Lab
-layout: post
+layout: default
 group: news
 description: "Latest news, publications, awards, and presentations from the Omar Lab at Cedars-Sinai Medical Center."
 ---
 
-<!-- This loops through the paginated posts -->
+<div class="row">
+
+# News
+
+<br>
+
 {% for post in paginator.posts %}
-<hr>
-<h2><a href="{{ post.url }}" style="color: #052049; text-decoration: none;">{{ post.title }}</a></h2>
-<p class="author">
-  {% if post.author %}<span class="author"><a href="/members#{{post.author}}">{{post.author}}</a></span><br>{% endif %}
-  <span class="date"><em>{{ post.date | date_to_long_string }}</em></span>
-  {% if post.tags.size > 0 %}
-  <br>tags:
-  {% for tag in post.tags %}
-  {% assign tag_slug = tag | slugify: "raw" %}
-  <a class="tag-link" href={{ site.baseurl | append: "/tags/" | append: tag_slug | append: "/" }} rel="category tag">
-    #{{ tag }}
-  </a>
-  {% endfor %}
-  {% endif %}
-</p>
-<div class="content">
-  <p>{{ post.excerpt | strip_html | truncatewords: 60 }}</p>
+<div class="news-item" style="margin-bottom: 2rem;">
+  <hr>
+  <h3><a href="{{ post.url }}" style="color: #052049; text-decoration: none;">{{ post.title }}</a></h3>
+  <p style="color: #6c757d; margin-bottom: 0.75rem;">
+    {% if post.author %}<a href="/members#{{post.author}}">{{post.author}}</a> · {% endif %}
+    <em>{{ post.date | date_to_long_string }}</em>
+    {% if post.tags.size > 0 %}
+    · tags:
+    {% for tag in post.tags %}
+    {% assign tag_slug = tag | slugify: "raw" %}
+    <a class="tag-link" href={{ site.baseurl | append: "/tags/" | append: tag_slug | append: "/" }} rel="category tag">#{{ tag }}</a>
+    {% endfor %}
+    {% endif %}
+  </p>
+  <p>{{ post.excerpt | strip_html | truncatewords: 50 }}</p>
   <a href="{{ post.url }}" class="btn btn-sm" style="background-color: #052049; color: white;">Read more →</a>
 </div>
 {% endfor %}
 <hr>
+
+</div>
 
 <!-- This makes links to other paginator pages -->
 {% if paginator.total_pages > 1 %}
