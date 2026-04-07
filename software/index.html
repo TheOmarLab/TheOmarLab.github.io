@@ -54,6 +54,11 @@ sitemap: true
               PyPI
             </a>
             {% endif %}
+            {% if tool.preprint %}
+            <a href="{{ tool.preprint }}" class="btn btn-sm" style="background-color: #052049; color: white;" target="_blank" rel="noopener">
+              Preprint
+            </a>
+            {% endif %}
           </div>
         </div>
       </div>
