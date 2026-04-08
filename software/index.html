@@ -36,6 +36,12 @@ sitemap: true
             {% if tool.status %}
             <span class="badge" style="background-color: #059669;">{{ tool.status }}</span>
             {% endif %}
+            {% if tool.pypi %}
+            {% assign pypi_name = tool.pypi | split: "/project/" | last | split: "/" | first %}
+            <a href="https://pepy.tech/project/{{ pypi_name }}" target="_blank" rel="noopener" style="text-decoration: none;">
+              <img src="https://static.pepy.tech/badge/{{ pypi_name }}" alt="PyPI Downloads" style="height: 20px;" loading="lazy">
+            </a>
+            {% endif %}
           </div>
           <div class="d-flex flex-wrap gap-2">
             {% if tool.github %}
