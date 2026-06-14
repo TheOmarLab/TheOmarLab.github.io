@@ -2,7 +2,7 @@
 name: Mohamed Omar, M.D
 startdate: [2020-03-01]
 enddate: []
-image: /static/img/members/omar.jpg
+image: /static/img/members/Omar.jpeg
 position: Principal Investigator
 priority: 1
 #current:
