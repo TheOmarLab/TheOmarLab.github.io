@@ -20,6 +20,11 @@ We welcome people from all backgrounds!<br>
 {% continue %}
 {% endif %}
 
+{% assign pos_lower = member.position | downcase %}
+{% if pos_lower contains "intern" or pos_lower contains "srtp" %}
+{% continue %}
+{% endif %}
+
         <hr>
         <!-- The paddingtop and margin-top edits allow anchors to link properly. -->
         <div id = "{{member.name}}" class="row" style="padding-top: 60px; margin-top: -60px;">
@@ -44,6 +49,67 @@ We welcome people from all backgrounds!<br>
                 {% endif %}
                 {% if member.Cedars_Sinai %}
                   <!-- <a href="https://www.cedars-sinai.org/home.html"><img class="inline-block mem-icon" src="/static/img/logo/CedarsLogo.png"></a> -->
+                  <a href= "https://researchers.cedars-sinai.edu/{{member.Cedars_Sinai}}"> Cedars-Sinai Profile </a> <br>
+                {% endif %}
+                {% if member.scholar %}
+                  <a href="http://scholar.google.com"><img class="inline-block mem-icon" src="/static/img/logo/gscholar_logo.svg"></a>
+                  <a href= "http://scholar.google.com/citations?user={{member.scholar}}"> {% if member.timeline_name %}{{ member.timeline_name }}{% else %}{{ member.name | split: " " | first }}{% endif %}'s Citations </a> <br>
+                {% endif %}
+                {% if member.twitter %}
+                  <a href="http://twitter.com"><img class="inline-block mem-icon" src="/static/img/logo/twitter_logo.svg"></a>
+                  <a href= "http://twitter.com/{{member.twitter}}"> @{{member.twitter}} </a> <br>
+                {% endif %}
+                {% if member.bsky %}
+                  <a href="https://bsky.app/"><img class="inline-bloc mem-icon" src="/static/img/logo/bsky_logo.svg"></a>
+                  <a href= "https://bsky.app/profile/{{member.bsky}}"> {{member.bsky}} </a> <br>
+                {% endif %}
+                {% if member.github %}
+                  <a href="http://github.com"><img class="inline-bloc mem-icon" src="/static/img/logo/github_logo.svg"></a>
+                  <a href= "http://github.com/{{member.github}}"> {{member.github}} </a> <br>
+                {% endif %}
+            </div>
+            <div class="col-sm-8">
+                {{member.description | markdownify}}
+            </div>
+        </div>
+{% endfor %}
+
+<br>
+<h2>Undergraduate Interns</h2>
+
+{% assign sorted_interns = site.members | sort: "priority" %}
+{% for member in sorted_interns %}
+
+{% assign pos_lower = member.position | downcase %}
+{% unless pos_lower contains "intern" or pos_lower contains "srtp" %}
+{% continue %}
+{% endunless %}
+
+        <hr>
+        <div id = "{{member.name}}" class="row" style="padding-top: 60px; margin-top: -60px;">
+            <div class="col-sm-4">
+                <img class="img-fluid" src="{{member.image}}" {% if member.altimage %} onmouseover="this.src='{{member.altimage}}';" onmouseout="this.src='{{member.image}}';" {% endif %} alt="{{member.name}}" loading="lazy" width="365" height="365"><br>
+                <strong>{{member.name}}</strong> <br>
+                {% if member.pronouns %}
+                  <em>{{member.pronouns}}</em> <br>
+                {% endif %}
+                {{member.position | markdownify | remove: '<p>' | remove: '</p>' }} <br>
+                {% if member.subsequent %}
+                  <em>Subsequently: {{member.subsequent}}</em> <br>
+                {% endif %}
+                <em>{{member.email}}</em> <br>
+                {% if member.website %}
+                  <a style="overflow-wrap: break-word;" href= "{{member.website}}">{{member.website}}</a> <br>
+                {% endif %}
+                {% if member.orcid %}
+                  <a href="http://orcid.org"><img class="inline-block mem-icon" src="/static/img/logo/orcid_logo.svg"></a>
+                  <a href="http://orcid.org/{{member.orcid}}"> {{member.orcid}}</a> <br>
+                {% endif %}
+                {% if member.linkedin %}
+                  <a href="http://www.linkedin.com"><img class="inline-block mem-icon" src="/static/img/logo/linkedin_logo.svg"></a>
+                  <a href= "http://www.linkedin.com/in/{{member.linkedin}}"> {{member.linkedin}} </a> <br>
+                {% endif %}
+                {% if member.Cedars_Sinai %}
                   <a href= "https://researchers.cedars-sinai.edu/{{member.Cedars_Sinai}}"> Cedars-Sinai Profile </a> <br>
                 {% endif %}
                 {% if member.scholar %}

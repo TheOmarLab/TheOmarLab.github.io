@@ -75,41 +75,6 @@ Subsequently: {{member.subsequent}} <br>
 </div>
 {% endfor %}
 
-<br>
-## Undergraduate Interns
-{% for undergraduate in sorted %}
-
-{% assign position = undergraduate.position | downcase %}
-
-{% unless position contains "srtp" or position contains "intern" %}
-    {% continue %}
-{% endunless %}
-{% if position contains "affiliate"%}
-    {% continue %}
-{% endif %}
-
-<hr>
-<div id = "{{undergraduate.name}}" style="padding-top: 60px; margin-top: -60px;">
-<p><strong>{{undergraduate.name}}</strong> - <em>{{undergraduate.position | markdownify | remove: '<p>' | remove: '</p>' }}</em><br>
-
-{% if undergraduate.pronouns %}
-<em>{{undergraduate.pronouns}}</em><br>
-{% endif %}
-
-{% assign start = undergraduate.startdate | first | date:"%Y" %}
-{% assign end = undergraduate.enddate | last | date:"%Y" %}
-
-{% if start == end %}
-{{ start }}<br>
-{% else %}
-{{ start }} - {{ end }}<br>
-{% endif %}
-
-{% if undergraduate.subsequent %}
-Subsequently: {{undergraduate.subsequent}}<br>
-{% endif %}
-</p>
-</div> {% endfor %}
 
 
 <br>
