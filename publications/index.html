@@ -205,7 +205,7 @@ description: "Peer-reviewed publications and preprints from the Omar Lab on comp
 		<!--additional links - optional-->
 		{% if publication.links %}
 			<br>
-			<h6>Additional Link{% if publication.links.size > 1 %}s{% endif %}</h6>
+			<h6>{% if publication.links_title %}{{ publication.links_title }}{% else %}Additional Link{% if publication.links.size > 1 %}s{% endif %}{% endif %}</h6>
 			{% for link in publication.links %}
 				<li><a href="{{link.url}}" alt="{{link.name}} (opens in new tab)" target="_blank">{{link.name}}</a></li>
 			{% endfor %}
