@@ -79,9 +79,6 @@ Subsequently: {{member.subsequent}} <br>
 </div>
 {% endfor %}
 
-
-
-<br>
 ## Lab Visitors
 {% for visitor in sorted %}
 
