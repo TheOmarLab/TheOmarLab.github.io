@@ -8,7 +8,7 @@ description: "Our research focuses on AI-powered multimodal risk stratification,
 <div class="row">
 
 # Our research
-We focus on developing robust artificial intelligence (AI)-powered multimodal risk-stratification tools to forecast the risk of disease progression in cancer patients. These tools incorporate the composition of the tumor microenvironment (TME) in their training to improve their robustness, accuracy, and generalizability to different patient cohorts. We work with different data modalities, including transcriptomics, histopathology, and radiology images to build robust AI models for risk assessment in patients newly diagnosed with cancer. A key component of our research is using the composition of the tumor microenvironment to extract high-quality biological features that serve as supervisors for the training process, guarding against overfitting.
+We build artificial intelligence (AI) tools that read tissue the way biology is organized, so that predictions about a patient's disease rest on interpretable structure rather than opaque correlations. Our models are trained with the composition of the tumor microenvironment (TME) in the loop, which makes them more robust, easier to interrogate, and more likely to hold up in cohorts they were never trained on. We work across transcriptomics, spatial omics, histopathology, and radiology, and we ask the same question of every modality: what is the tissue actually doing, and what does that imply for the patient in front of us?
 
 #### Our work focuses mainly on prostate cancer; however, it is important to note that our approaches can be applied to other cancer types as well  
 <br>
@@ -22,8 +22,9 @@ We focus on developing robust artificial intelligence (AI)-powered multimodal ri
 
 <div class="col-md-7 order-md-1">
 
-We are interested in uncovering pathomic signatures from routine H&E-stained whole slide images (WSIs) to inform patients' prognostication and the prediction of molecular and clinical phenotypes (see [Omar et al. Ann Rev of Cancer Bio. 2024](https://www.annualreviews.org/content/journals/10.1146/annurev-cancerbio-062822-010523)). 
-Our work in this domain leverages deep learning algorithms to automate WSIs preprocessing and feature extraction to identify morphometric features associated with certain phenotypes. For instance, we recently developed a robust model for inferring the status of TMPRSS2:ERG fusion (a key molecular alteration in prostate cancer) from the tissue morphology depicted in routine H&E-stained images of radical prostatectomy specimens (see [Omar et al. Mol Cancer Res 2024](https://aacrjournals.org/mcr/article/22/4/347/741845/Semi-Supervised-Attention-Based-Deep-Learning-for)).
+We are interested in uncovering pathomic signatures from routine H&E-stained whole slide images (WSIs) to inform patients' prognostication and the prediction of molecular and clinical phenotypes (see [Omar et al. Ann Rev of Cancer Bio. 2024](https://www.annualreviews.org/content/journals/10.1146/annurev-cancerbio-062822-010523)).
+Our work in this domain leverages deep learning algorithms to automate WSIs preprocessing and feature extraction to identify morphometric features associated with certain phenotypes. For instance, we developed a robust model for inferring the status of TMPRSS2:ERG fusion (a key molecular alteration in prostate cancer) from the tissue morphology depicted in routine H&E-stained images of radical prostatectomy specimens (see [Omar et al. Mol Cancer Res 2024](https://aacrjournals.org/mcr/article/22/4/347/741845/Semi-Supervised-Attention-Based-Deep-Learning-for)).
+More recently, we asked whether tissue architecture alone carries prognostic signal when the model never sees outcome during training, and found that an outcome-blind architecture score is associated with prostate cancer-specific mortality (see [Lê et al. 2026](https://www.researchsquare.com/article/rs-10990195/v1)).
 
 </div>
 <div class="col-md-5 order-md-2 align-self-center">
@@ -31,36 +32,68 @@ Our work in this domain leverages deep learning algorithms to automate WSIs prep
 
 </div>
 </div>
+
 <div class="row">
 
-### Deconvoluting the tumor microenvironment composition across the spectrum of cancer initiation and progression
+### Resolving the tumor microenvironment into tissue modules
 
 <div class="col-md-7 order-md-2">
 
-Our lab focuses on developing stage-specific tissue modules that comprehensively capture the complex composition and interplay within the tumor microenvironment at early stages preceding progression. These modules comprise cellular composition, expression profiles, intercellular interactions, gene regulatory networks, and spatial neighborhoods. This approach provides an in-depth, systemic understanding of the tumor microenvironment, highlighting the diversity of cell types and the extensive network of molecular and spatial interactions that dictate cellular function and the trajectory of progression. 
-We employ high-resolution spatial omics to generate single cell-resolution data that recapitulates the spatial distribution and abundance of mRNAs and specific proteins within the tissue context. We leverage this data to construct detailed maps of cellular composition, molecular expression and spatial localization, facilitating a nuanced analysis of how these factors interact within the physical confines of the tumor microenvironment as the tumor progresses. 
+Single cells are rarely the unit at which tissue behaves. We therefore define <i>tissue modules</i>: recurrent, spatially coherent units that bundle cellular composition, expression programs, ligand–receptor signaling, gene regulatory activity, and spatial neighborhood structure into a single interpretable object. Working at this level gives us features that stay meaningful across samples, platforms, and disease sites, rather than descriptors that drift with batch or annotation.
+
+We derive these modules from high-resolution spatial transcriptomics and imaging-based spatial profiling, then ask which modules track with progression, with the emergence of high-risk phenotypes, and with treatment pressure. Because the modules are anchored to morphology, they also give us a route back to routine pathology: we train models to infer module composition directly from an H&E slide, so that a spatially resolved readout can be recovered from a stained section a patient has already had taken.
 
 </div>
 <div class="col-md-5 order-md-1 align-self-center">
-<img class="img-fluid" src="/static/img/pub/digitalpath.gif" alt="digitalPath" loading="lazy">
+<img class="img-fluid" src="/static/img/research/tissue_modules.png" alt="Tissue modules inferred from spatial data and routine H&E" loading="lazy">
 
 </div>
 </div>
 
 <div class="row">
 
-### Developing multimodal risk stratification tools for cancer patients to assist with clinical decision making
+### Measuring how tissue responds to treatment over time
 
 <div class="col-md-7 order-md-1">
 
-Our lab develops multimodal risk stratification tools that integrate diverse patient-centered data types, including omics, pathomics, and radiomics to enhance risk assessment and inform patients’ management. 
-Omics offer a deep dive into the molecular underpinnings of tumor progression, while pathomics provide a spatial microscopic view of TME dynamics by translating pathology images into quantifiable data. Radiomics further enrich this by extracting non-invasive macroscopic features from medical imaging that can be correlated with underlying disease mechanisms and outcomes. The fusion of these data modalities promises to unveil intricate indicators of high-risk disease at very early stages, which cannot be discerned using unimodal approaches. 
+When a patient is biopsied before and during treatment, an apparent change in a cell population can mean several different things: the cells may be doing something different, they may be present in different proportions, or the tissue may simply have been sampled or dissociated differently. Conflating these leads to confident conclusions that do not replicate.
+
+We develop participant-level statistical methods for longitudinal single-cell and spatial experiments that treat the participant, not the cell, as the biological replicate, and that separate molecular activity from population representation while carrying the uncertainty of the measurement itself. A parallel line of work asks the same question of tissue organization: whether the spatial arrangement of a tissue has changed beyond what shifts in cell density and geometry would already explain. These methods are released as open software (see [sctrial](https://www.omar-lab.com/sctrial/)).
 
 </div>
-<div class="col-md-5 order-md-2 text-end d-flex justify-content-center">
+<div class="col-md-5 order-md-2 align-self-center">
+<img class="img-fluid" src="/static/img/research/longitudinal_response.png" alt="Participant-level analysis of longitudinal tissue responses" loading="lazy">
+
+</div>
+</div>
+
+<div class="row">
+
+### Building multimodal risk stratification tools for clinical decision making
+
+<div class="col-md-7 order-md-2">
+
+Our lab develops multimodal risk stratification tools that integrate diverse patient-centered data types, including omics, pathomics, and radiomics, to sharpen risk assessment and inform patient management.
+Omics offer a deep dive into the molecular underpinnings of tumor progression, while pathomics provide a spatial microscopic view of TME dynamics by translating pathology images into quantifiable data. Radiomics further enrich this by extracting non-invasive macroscopic features from medical imaging that can be correlated with underlying disease mechanisms and outcomes. Rather than concatenating these modalities and hoping a model finds the signal, we use TME-derived biology to constrain which features each encoder is allowed to rely on, so the resulting risk estimate is traceable to tissue state. Our goal is a decision point clinicians actually face: after a diagnostic biopsy, which patients need treatment intensification, and which can be safely watched.
+
+</div>
+<div class="col-md-5 order-md-1 text-end d-flex justify-content-center align-self-center">
 <img class="img-fluid" style="max-width: 550px; height: auto; object-fit: contain;" src="/static/img/pub/MultimodalRiskAssessment.png" alt="multimodal" loading="lazy">
 </div>
 </div>
 
+<div class="row">
 
+### Forecasting tissue adaptation
+
+<div class="col-md-7 order-md-1">
+
+Tumors do not sit still under therapy; they adapt, and the tissue reorganizes around them. The long-term ambition of the lab is to move from describing that adaptation after the fact to forecasting it: given the state of a tissue now, which trajectory is it on, and what would change it? This requires representations that are stable enough to compare across time points and biologically grounded enough to be acted on, which is why tissue modules, longitudinal inference, and multimodal integration are pursued as one program rather than three separate ones. The approach is deliberately disease-agnostic, and we develop it in prostate cancer because the natural history, sampling, and outcome data are rich enough to test it honestly.
+
+</div>
+<div class="col-md-5 order-md-2 align-self-center">
+<img class="img-fluid" src="/static/img/pub/digitalpath.gif" alt="digitalPath" loading="lazy">
+
+</div>
+</div>
 
