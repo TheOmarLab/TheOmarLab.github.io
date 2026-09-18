@@ -28,7 +28,7 @@ More recently, we asked whether tissue architecture alone carries prognostic sig
 
 </div>
 <div class="col-md-5 order-md-2 align-self-center d-flex justify-content-center">
-<img class="img-fluid" style="max-height: 340px; width: auto;" src="/static/img/pub/erg.jpeg" alt="ERGmodel" loading="lazy">
+<img class="img-fluid" style="max-height: 460px; width: auto;" src="/static/img/pub/erg.jpeg" alt="ERGmodel" loading="lazy">
 </div>
 </div>
 
