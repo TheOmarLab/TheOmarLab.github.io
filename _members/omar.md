@@ -7,19 +7,19 @@ position: Principal Investigator
 priority: 1
 #current:
 email: <a href="mailto:Mohamed.Omar@csmc.edu">Mohamed.Omar@csmc.edu</a><br>
-scholar: iHJ6TzcAAAAJ
+scholar:
 website:
 Cedars_Sinai: Mohamed.Omar
-twitter: MohamedOmarMD
+twitter:
 linkedin: mohamed-omar-md
-bsky: "mohamedomarmd.bsky.social"
+bsky:
 github: TheOmarLab
 orcid: 0000-0002-8068-1920
-description: "Mohamed recieved his MD degree from the School of Medicine at Mansoura University, Egypt. He then conducted postdoctoral training in Computational Genomics at [Johns Hopkins University School of Medicine](https://www.hopkinsmedicine.org/) and in Computational Pathology from [Weill Medical College of Cornell University (Weill Cornell Medicine)](https://weill.cornell.edu/) in the Lab of [Dr. Luigi Marchionni](https://vivo.weill.cornell.edu/display/cwid-lum4003).
+description: "Mohamed received his M.D. from the School of Medicine at Mansoura University, Egypt. He then trained in computational genomics at [Johns Hopkins University School of Medicine](https://www.hopkinsmedicine.org/) and in computational pathology at [Weill Medical College of Cornell University (Weill Cornell Medicine)](https://weill.cornell.edu/) in the lab of [Dr. Luigi Marchionni](https://vivo.weill.cornell.edu/display/cwid-lum4003).
 
 
-In 2022, Mohamed became Assistant Professor of Research in [Pathology and Laboratory Medicine](https://pathology.weill.cornell.edu/), where he worked on developing computational approaches for cancer phenotype prediction using histopathology and multi-omics data.
+In 2022 he joined the faculty of [Pathology and Laboratory Medicine](https://pathology.weill.cornell.edu/) at Weill Cornell Medicine as Assistant Professor of Research, and from 2023 he also served as Lead Scientist at [Dana-Farber Cancer Institute](https://www.dana-farber.org/). His work over these years focused on predicting cancer phenotypes from histopathology and multi-omics data, and on using biological structure to constrain machine learning models so that they generalize beyond the cohort they were trained on.
 
 
-He moved to Los Angeles, California in November 2024 to start his independent research lab in the [Department of Computational Biomedicine](https://www.cedars-sinai.edu/health-sciences-university/research/departments-institutes/computational-biomedicine.html) at [Cedars-Sinai](https://www.cedars-sinai.org/home.html)."
+He moved to Los Angeles in November 2024 to start his independent lab, and is Assistant Professor in the [Department of Computational Biomedicine](https://www.cedars-sinai.edu/health-sciences-university/research/departments-institutes/computational-biomedicine.html) and Research Scientist in the Cancer Institute at [Cedars-Sinai](https://www.cedars-sinai.org/home.html)."
 ---
