@@ -16,7 +16,7 @@ We welcome people from all backgrounds!<br>
 {% continue %}
 {% endunless %}
 
-{% if member.position contains "Affiliate" or member.position contains "Visiting" %}
+{% if member.visitor or member.position contains "Affiliate" or member.position contains "Visiting" %}
 {% continue %}
 {% endif %}
 

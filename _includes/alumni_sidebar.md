@@ -15,6 +15,10 @@
 {% endunless %}
 {% endif %}
 
+{% if member.visitor %}
+{% continue %}
+{% endif %}
+
 <hr>
 <div id = "{{member.name}}" style="padding-top: 60px; margin-top: -60px;">
 <p><strong>{{member.name}}</strong><br>
@@ -82,7 +86,7 @@ Subsequently: {{member.subsequent}} <br>
 {% for visitor in sorted %}
 
 {% assign position = visitor.position | downcase %}
-{% unless position contains "visiting" %}
+{% unless visitor.visitor or position contains "visiting" %}
 {% continue %}
 {% endunless %}
 
