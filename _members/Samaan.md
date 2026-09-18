@@ -4,7 +4,7 @@ startdate: [2026-09-01]
 enddate:
 image: /static/img/members/profile.jpg
 altimage: #/static/img/members/Samaan_pb.jpg
-position: Visiting Assistant Professor and Staff Physician
+position: Assistant Professor and Staff Physician
 priority: 2
 #subsequent:  update once you become an alumnus
 email: <a href="mailto:Jamil.Samaan@cshs.org">Jamil.Samaan@cshs.org</a><br>
