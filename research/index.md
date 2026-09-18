@@ -10,7 +10,7 @@ description: "Our research focuses on AI-powered multimodal risk stratification,
 # Our research
 We build artificial intelligence (AI) tools that read tissue the way biology is organized, so that predictions about a patient's disease rest on interpretable structure rather than opaque correlations. Our models are trained with the composition of the tumor microenvironment (TME) in the loop, which makes them more robust, easier to interrogate, and more likely to hold up in cohorts they were never trained on. We work across transcriptomics, spatial omics, histopathology, and radiology, and we ask the same question of every modality: what is the tissue actually doing, and what does that imply for the patient in front of us?
 
-#### Our work focuses mainly on prostate cancer; however, it is important to note that our approaches can be applied to other cancer types as well
+Our work focuses mainly on prostate cancer; however, it is important to note that our approaches can be applied to other cancer types as well.
 
 </div>
 
