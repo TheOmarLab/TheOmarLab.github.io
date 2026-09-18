@@ -34,33 +34,16 @@ More recently, we asked whether tissue architecture alone carries prognostic sig
 
 <div class="row">
 
-### Resolving the tumor microenvironment into tissue modules
-
-<div class="col-md-7 order-md-2 align-self-center">
-
-Single cells are rarely the unit at which tissue behaves. We therefore define <i>tissue modules</i>: recurrent, spatially coherent units that bundle cellular composition, expression programs, ligand–receptor signaling, gene regulatory activity, and spatial neighborhood structure into a single interpretable object. Working at this level gives us features that stay meaningful across samples, platforms, and disease sites, rather than descriptors that drift with batch or annotation.
-
-We derive these modules from high-resolution spatial transcriptomics and imaging-based spatial profiling, then ask which modules track with progression, with the emergence of high-risk phenotypes, and with treatment pressure. Because the modules are anchored to morphology, they also give us a route back to routine pathology: we train models to infer module composition directly from an H&E slide, so that a spatially resolved readout can be recovered from a stained section a patient has already had taken.
-
-</div>
-<div class="col-md-5 order-md-1 align-self-center">
-<img class="img-fluid" src="/static/img/research/tissue_modules.png" alt="Tissue modules inferred from spatial data and routine H&E" loading="lazy">
-
-</div>
-</div>
-
-<div class="row">
-
 ### Measuring how tissue responds to treatment over time
 
-<div class="col-md-7 order-md-1 align-self-center">
+<div class="col-md-7 order-md-2 align-self-center">
 
 When a patient is biopsied before and during treatment, an apparent change in a cell population can mean several different things: the cells may be doing something different, they may be present in different proportions, or the tissue may simply have been sampled or dissociated differently. Conflating these leads to confident conclusions that do not replicate.
 
 We develop participant-level statistical methods for longitudinal single-cell and spatial experiments that treat the participant, not the cell, as the biological replicate, and that separate molecular activity from population representation while carrying the uncertainty of the measurement itself. A parallel line of work asks the same question of tissue organization: whether the spatial arrangement of a tissue has changed beyond what shifts in cell density and geometry would already explain. These methods are released as open software (see [sctrial](https://www.omar-lab.com/sctrial/)).
 
 </div>
-<div class="col-md-5 order-md-2 align-self-center">
+<div class="col-md-5 order-md-1 align-self-center">
 <img class="img-fluid" src="/static/img/research/longitudinal_response.png" alt="Participant-level analysis of longitudinal tissue responses" loading="lazy">
 
 </div>
@@ -70,13 +53,13 @@ We develop participant-level statistical methods for longitudinal single-cell an
 
 ### Building multimodal risk stratification tools for clinical decision making
 
-<div class="col-md-7 order-md-2 align-self-center">
+<div class="col-md-7 order-md-1 align-self-center">
 
 Our lab develops multimodal risk stratification tools that integrate diverse patient-centered data types, including omics, pathomics, and radiomics, to sharpen risk assessment and inform patient management.
 Omics offer a deep dive into the molecular underpinnings of tumor progression, while pathomics provide a spatial microscopic view of TME dynamics by translating pathology images into quantifiable data. Radiomics further enrich this by extracting non-invasive macroscopic features from medical imaging that can be correlated with underlying disease mechanisms and outcomes. Rather than concatenating these modalities and hoping a model finds the signal, we use TME-derived biology to constrain which features each encoder is allowed to rely on, so the resulting risk estimate is traceable to tissue state. Our goal is a decision point clinicians actually face: after a diagnostic biopsy, which patients need treatment intensification, and which can be safely watched.
 
 </div>
-<div class="col-md-5 order-md-1 align-self-center d-flex justify-content-center">
+<div class="col-md-5 order-md-2 align-self-center d-flex justify-content-center">
 <img class="img-fluid" src="/static/img/research/multimodal_framework.png" alt="Biology-guided multimodal framework for post-biopsy prostate cancer risk assessment" loading="lazy">
 </div>
 </div>
@@ -85,12 +68,12 @@ Omics offer a deep dive into the molecular underpinnings of tumor progression, w
 
 ### Forecasting tissue adaptation
 
-<div class="col-md-7 order-md-1 align-self-center">
+<div class="col-md-7 order-md-2 align-self-center">
 
 Tumors do not sit still under therapy; they adapt, and the tissue reorganizes around them. The long-term ambition of the lab is to move from describing that adaptation after the fact to forecasting it: given the state of a tissue now, which trajectory is it on, and what would change it? This requires representations that are stable enough to compare across time points and biologically grounded enough to be acted on, which is why tissue modules, longitudinal inference, and multimodal integration are pursued as one program. The approach is disease-agnostic, and we develop it in prostate cancer because the natural history, sampling, and outcome data are rich enough to test it.
 
 </div>
-<div class="col-md-5 order-md-2 align-self-center">
+<div class="col-md-5 order-md-1 align-self-center">
 <img class="img-fluid" src="/static/img/pub/digitalpath.gif" alt="digitalPath" loading="lazy">
 
 </div>
