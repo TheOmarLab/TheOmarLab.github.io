@@ -5,7 +5,7 @@ enddate:
 image: /static/img/members/Le.jpg
 altimage: #/static/img/members/Le_pb.jpg
 position: U-GROW Summer Intern
-priority: 7
+priority: 9
 pronouns: she/her
 email: <a href="mailto:Anh.Le2@cshs.org">Anh.Le2@cshs.org</a><br>
 scholar:  #Google Scholar User ID

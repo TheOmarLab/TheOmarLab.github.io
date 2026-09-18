@@ -5,7 +5,7 @@ enddate: [2025-10-25]
 image: /static/img/members/Magana.jpg
 altimage: #/static/img/members/Magana_pb.jpg
 position: U-GROW Summer Intern
-priority: 6
+priority: 8
 subsequent: "Masters Student @ Johns Hopkins Bloomberg School of Public Health"
 email:
 scholar:

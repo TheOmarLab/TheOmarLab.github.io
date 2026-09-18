@@ -5,7 +5,7 @@ enddate: []
 image: /static/img/members/vasanthakumari.jpg 
 altimage: #/static/img/members/asthana_pb.jpg 
 position: Research Data Scientist
-priority: 2
+priority: 3
 #subsequent:  update once you become an alumnus
 email: Priyanka.Vasanthakumari (at) cshs.org
 email: <a href="mailto:Priyanka.Vasanthakumari@cshs.org">Priyanka.Vasanthakumari@cshs.org</a><br>

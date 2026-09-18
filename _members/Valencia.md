@@ -5,7 +5,7 @@ enddate:
 image: /static/img/members/Valencia.jpeg
 altimage: #/static/img/members/Valencia_pb.jpg
 position: PhD Student
-priority: 5
+priority: 7
 #subsequent:  update once you become an alumnus
 email: <a href="mailto:Itzel.Valencia@cshs.org">Itzel.Valencia@cshs.org</a><br>
 scholar:  #Google Scholar User ID

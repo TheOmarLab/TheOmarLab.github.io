@@ -4,8 +4,8 @@ startdate: [2025-04-06]
 enddate: []
 image: /static/img/members/Ranjpour.jpg 
 altimage: #/static/img/members/asthana_pb.jpg
-position: Postdoctoral Scientist
-priority: 3
+position: Project Scientist
+priority: 4
 #subsequent:  update once you become an alumnus
 email: <a href="mailto:Maryam.RanjpourAghmiouni@cshs.org">Maryam.RanjpourAghmiouni@cshs.org</a><br>
 scholar: -c8Cei0AAAAJ
