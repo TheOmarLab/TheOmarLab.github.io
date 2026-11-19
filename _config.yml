@@ -28,6 +28,8 @@ exclude:
         - vendor/gems/
         - vendor/ruby/
         - tasks/
+        - README.md
+        - LICENSE
 
 collections:
         software:

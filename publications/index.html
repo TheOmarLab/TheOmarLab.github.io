@@ -73,7 +73,7 @@ description: "Peer-reviewed publications and preprints from the Omar Lab on comp
 
 <div class="row" style="padding-top: 20px; margin-top: -20px">
 	<div class="col-sm-6">
-		<img class="img-fluid" src="{{publication.image}}" alt="Key Figure" loading="lazy" style="max-height: 200px;">
+		<img class="img-fluid" src="{{publication.image}}" alt="Key figure from {{ publication.title | strip_html | escape }}" loading="lazy" style="max-height: 200px;">
 	</div>
 	<ul class="col-sm-6">
 		<br>
