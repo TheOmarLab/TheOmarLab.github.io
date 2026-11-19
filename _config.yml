@@ -32,21 +32,9 @@ exclude:
 collections:
         software:
                 output: false
-        affiliates:
-                output: false
         members:
                 output: false
         publications:
-                output: false
-        reviews:
-                output: false
-        alumni:
-                output: false
-        sep:
-                output: false
-        visitors:
-                output: false
-        undergrads:
                 output: false
         tags:
                 output: false
