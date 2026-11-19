@@ -17,10 +17,10 @@ sitemap: true
 <div class="col-12 mb-4">
   <div class="card shadow-sm border-0" style="border-left: 4px solid #0891b2 !important;">
     <div class="card-body">
-      <div class="d-flex align-items-start">
+      <div class="d-flex flex-column flex-md-row align-items-start">
         {% if tool.logo %}
-        <div class="me-4 flex-shrink-0 d-flex align-items-stretch">
-          <img src="{{ tool.logo }}" alt="{{ tool.name }}" style="width: 280px; object-fit: contain;" loading="lazy">
+        <div class="me-md-4 mb-3 mb-md-0 flex-shrink-0 d-flex align-items-stretch">
+          <img src="{{ tool.logo }}" alt="{{ tool.name }}" style="width: 280px; max-width: 100%; object-fit: contain;" loading="lazy">
         </div>
         {% endif %}
         <div class="flex-grow-1">

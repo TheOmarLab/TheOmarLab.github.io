@@ -10,3 +10,8 @@ TheOmarLab.github.io.Rproj
 .Rhistory
 **/.Rhistory
 *.Rhistory
+
+# local tooling files
+.claude-dev-helper/
+.plugin-config/
+.project-structure.md

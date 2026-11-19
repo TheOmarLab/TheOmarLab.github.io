@@ -11,12 +11,13 @@ description: "Peer-reviewed publications and preprints from the Omar Lab on comp
 {% for publication in sorted %}
 
 <hr>
-<div class="row" style="padding-top: 60px; margin-top: -60px;" id="{{publication.pmid}}">
+{% assign pub_anchor = publication.pmid | default: publication.doi | default: publication.title | append: "" | slugify %}
+<div class="row" style="padding-top: 60px; margin-top: -60px;" id="{{ pub_anchor }}">
 	<div>
 		<h5>{{ publication.title | markdownify  | remove: '<p>' | remove: '</p>'}}</h5>
 		<h6>{{ publication.authors | markdownify | remove: '<p>' | remove: '</p>' }}</h6>
 		{% if publication.journal %}
-			<i>{{ publication.journal }},</i>
+			<i>{{ publication.journal | strip }},</i>
 			{{publication.pub_date | split: "-" | first }}
 		{% else %}
 			{% if publication.biorxiv %}
@@ -62,11 +63,11 @@ description: "Peer-reviewed publications and preprints from the Omar Lab on comp
   "sameAs": "https://pubmed.ncbi.nlm.nih.gov/{{ publication.pmid }}/",{% endif %}
   {% if publication.image %}"image": "{{ site.url }}{{ publication.image }}",{% endif %}
   "author": {{ publication.authors | strip_html | remove: "**" | split: "," | jsonify }},
-  "publisher": {
+  {% if publication.journal or publication.medrxiv or publication.biorxiv or publication.biorxiv_version %}"publisher": {
     "@type": "Organization",
     "name": {% if publication.journal %}{{ publication.journal | strip | jsonify }}{% elsif publication.medrxiv %}"medRxiv"{% else %}"bioRxiv"{% endif %}
-  },
-  "url": "{{ site.url }}/publications/#{{ publication.pmid }}"
+  },{% endif %}
+  "url": "{{ site.url }}/publications/#{{ pub_anchor }}"
 }
 </script>
 
@@ -79,12 +80,12 @@ description: "Peer-reviewed publications and preprints from the Omar Lab on comp
 		<h6>Access the paper</h6>
 		<!--PMID-->
 		{% if publication.pmid %}
-		<li>PMID: <a href="http://www.ncbi.nlm.nih.gov/pubmed/{{publication.pmid}}" title = "PubMed: {{publication.pmid}} (opens in new tab)" target="_blank"> {{publication.pmid}}</a></li>
+		<li>PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/{{publication.pmid}}/" title = "PubMed: {{publication.pmid}} (opens in new tab)" target="_blank"> {{publication.pmid}}</a></li>
 		{% endif %}
 
 		<!--PMCID - optional -->
 		{% if publication.pmcid %}
-		<li>PMCID: <a href="http://www.ncbi.nlm.nih.gov/pmc/articles/{{publication.pmcid}}" title = "PubMed Central: {{publication.pmcid}} (opens in new tab)" target="_blank"> {{publication.pmcid}}</a></li>
+		<li>PMCID: <a href="https://pmc.ncbi.nlm.nih.gov/articles/{{publication.pmcid}}/" title = "PubMed Central: {{publication.pmcid}} (opens in new tab)" target="_blank"> {{publication.pmcid}}</a></li>
 		{% endif %}
 
 		<!--Biorxiv - optional -->
