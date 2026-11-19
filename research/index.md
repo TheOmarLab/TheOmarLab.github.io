@@ -26,7 +26,7 @@ More recently, we asked whether tissue architecture alone carries prognostic sig
 
 </div>
 <div class="col-md-5 order-md-2 align-self-center d-flex justify-content-center">
-<img class="img-fluid" style="max-height: 460px; width: auto;" src="/static/img/pub/erg.jpeg" alt="ERGmodel" loading="lazy">
+<img class="img-fluid" style="max-height: 460px; width: auto;" src="/static/img/pub/erg.jpeg" alt="Deep learning model for predicting TMPRSS2:ERG fusion status from H&amp;E whole slide images of prostate cancer" loading="lazy">
 </div>
 </div>
 
@@ -42,7 +42,7 @@ We develop participant-level statistical methods for longitudinal single-cell an
 
 </div>
 <div class="col-md-5 order-md-1 align-self-center">
-<img class="img-fluid" src="/static/img/research/longitudinal_response.png" alt="Participant-level analysis of longitudinal tissue responses" loading="lazy">
+<img class="img-fluid" src="/static/img/research/longitudinal_response.webp" alt="Participant-level analysis of longitudinal tissue responses" loading="lazy">
 
 </div>
 </div>
@@ -58,7 +58,7 @@ Omics offer a deep dive into the molecular underpinnings of tumor progression, w
 
 </div>
 <div class="col-md-5 order-md-2 align-self-center d-flex justify-content-center">
-<img class="img-fluid" src="/static/img/research/multimodal_framework.png" alt="Biology-guided multimodal framework for post-biopsy prostate cancer risk assessment" loading="lazy">
+<img class="img-fluid" src="/static/img/research/multimodal_framework.webp" alt="Biology-guided multimodal framework for post-biopsy prostate cancer risk assessment" loading="lazy">
 </div>
 </div>
 
@@ -72,7 +72,7 @@ Tumors do not sit still under therapy; they adapt, and the tissue reorganizes ar
 
 </div>
 <div class="col-md-5 order-md-1 align-self-center">
-<img class="img-fluid" src="/static/img/pub/digitalpath.gif" alt="digitalPath" loading="lazy">
+<img class="img-fluid" src="/static/img/pub/digitalpath.jpg" alt="Digital pathology workflow from whole slide images to deep learning models and downstream applications" loading="lazy">
 
 </div>
 </div>
