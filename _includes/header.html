@@ -14,7 +14,9 @@
     </script>
     {% capture meta_desc %}{% if page.description %}{{ page.description }}{% elsif page.layout == 'post' and page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | strip | truncate: 160 }}{% else %}{{ site.description }}{% endif %}{% endcapture %}
     {% assign meta_desc = meta_desc | strip | escape_once %}
-    <title>{% if page.url == "/" %}{{ site.title }}{% else %}{{ page.title }} | {{ site.name }}{% endif %}</title>
+    {% capture page_title %}{% if page.url == "/" %}{{ site.title }}{% else %}{{ page.title }}{% if paginator.page > 1 %} (Page {{ paginator.page }}){% endif %} | {{ site.name }}{% endif %}{% endcapture %}
+    {% assign page_title = page_title | strip | escape_once %}
+    <title>{{ page_title }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <meta name="description" content="{{ meta_desc }}">
     <meta name="theme-color" content="#052049">
@@ -50,7 +52,7 @@
     <link rel="alternate" type="application/atom+xml" title="Omar Lab News Feed" href="{{ site.url }}/feed.xml">
 
     <!-- Open Graph Meta Tags (Facebook, LinkedIn) -->
-    <meta property="og:title" content="{% if page.url == "/" %}{{ site.title }}{% else %}{{ page.title }} | {{ site.name }}{% endif %}">
+    <meta property="og:title" content="{{ page_title }}">
     <meta property="og:description" content="{{ meta_desc }}">
     <meta property="og:url" content="{{ site.url }}{{ page.url }}">
     <meta property="og:site_name" content="{{ site.name }}">
@@ -63,7 +65,7 @@
 
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="{% if page.url == "/" %}{{ site.title }}{% else %}{{ page.title }} | {{ site.name }}{% endif %}">
+    <meta name="twitter:title" content="{{ page_title }}">
     <meta name="twitter:description" content="{{ meta_desc }}">
     <meta name="twitter:image" content="{{ site.url }}/static/img/og-image.png">
 
@@ -110,6 +112,7 @@
             }
           ],
           "sameAs": [
+            "https://www.cedars-sinai.edu/health-sciences-university/research/labs/omar.html",
             "https://github.com/TheOmarLab"
           ],
           "knowsAbout": [
