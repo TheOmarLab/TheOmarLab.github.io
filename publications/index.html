@@ -62,7 +62,7 @@ description: "Peer-reviewed publications and preprints from the Omar Lab on comp
   ],
   "sameAs": "https://pubmed.ncbi.nlm.nih.gov/{{ publication.pmid }}/",{% endif %}
   {% if publication.image %}"image": "{{ site.url }}{{ publication.image }}",{% endif %}
-  "author": {{ publication.authors | strip_html | remove: "**" | split: "," | jsonify }},
+  "author": {{ publication.authors | strip_html | remove: "**" | replace: "... ", "" | replace: ", ", "," | remove: ",et al." | remove: " et al." | split: "," | jsonify }},
   {% if publication.journal or publication.medrxiv or publication.biorxiv or publication.biorxiv_version %}"publisher": {
     "@type": "Organization",
     "name": {% if publication.journal %}{{ publication.journal | strip | jsonify }}{% elsif publication.medrxiv %}"medRxiv"{% else %}"bioRxiv"{% endif %}
@@ -73,7 +73,7 @@ description: "Peer-reviewed publications and preprints from the Omar Lab on comp
 
 <div class="row" style="padding-top: 20px; margin-top: -20px">
 	<div class="col-sm-6">
-		<img class="img-fluid" src="{{publication.image}}" alt="Key figure from {{ publication.title | strip_html | escape }}" loading="lazy" style="max-height: 200px;">
+		<img class="img-fluid pub-thumb" src="{{publication.image}}" alt="Key figure from {{ publication.title | strip_html | escape }}" loading="lazy" style="max-height: 200px;">
 	</div>
 	<ul class="col-sm-6">
 		<br>

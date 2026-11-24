@@ -302,7 +302,7 @@ footer {
     font-size: 1.1rem;
   }
 
-  img.img-fluid[src*="pub"] {
+  img.pub-thumb {
     max-height: 150px !important;
   }
 }
